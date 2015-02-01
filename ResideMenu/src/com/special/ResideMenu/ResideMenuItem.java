@@ -6,8 +6,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.special.ResideMenu.R;
-
 /**
  * User: special
  * Date: 13-12-10
@@ -24,6 +22,11 @@ public class ResideMenuItem extends LinearLayout {
      * menu item  title
      */
     private TextView tv_title;
+
+    /**
+     * layout id
+     */
+    private int layout_id;
 
     public ResideMenuItem(Context context) {
         super(context);
@@ -44,7 +47,18 @@ public class ResideMenuItem extends LinearLayout {
         tv_title.setText(title);
     }
 
+    public ResideMenuItem(Context context, int layout_id, int icon, String title) {
+        super(context);
+        initViews(context, layout_id);
+        iv_icon.setImageResource(icon);
+        tv_title.setText(title);
+    }
+
     private void initViews(Context context) {
+        initViews(context, R.layout.residemenu_item);
+    }
+
+    private void initViews(Context context, int layout_id) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         inflater.inflate(R.layout.residemenu_item, this);
         iv_icon = (ImageView) findViewById(R.id.iv_icon);
