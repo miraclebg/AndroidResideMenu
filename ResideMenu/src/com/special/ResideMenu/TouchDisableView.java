@@ -1,7 +1,6 @@
 package com.special.ResideMenu;
 
 
-
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.MotionEvent;

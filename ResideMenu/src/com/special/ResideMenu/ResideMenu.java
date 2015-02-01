@@ -5,6 +5,10 @@ import android.content.Context;
 import android.content.res.Configuration;
 import android.graphics.Rect;
 import android.util.DisplayMetrics;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -399,6 +403,7 @@ public class ResideMenu extends FrameLayout {
      * @param targetScaleY
      * @return
      */
+    @SuppressWarnings("ResourceType")
     protected AnimatorSet buildScaleDownAnimation(View target,
                                                   float targetScaleX, float targetScaleY) {
 
